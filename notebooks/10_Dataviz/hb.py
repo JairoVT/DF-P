@@ -6,7 +6,7 @@ import streamlit as st
 continentes = df['continent'].unique()
 continente = st.selectbox(label='Seleccione continente', options=continentes)
 
-mask = df['pais']==continente
+mask = df['continent']==continente
 dff = df[mask]
 
 fig = px.line(data_frame=dff, x='year', y='lifeExp')
